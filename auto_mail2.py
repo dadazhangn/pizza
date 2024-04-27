@@ -2,7 +2,7 @@ import email
 import os
 
 # 读取.eml文件
-file_path = "生日邀请.eml"  # 替换为实际.eml文件的路径
+file_path = "生日邀请ww.eml"  # 替换为实际.eml文件的路径
 with open(file_path, "rb") as f:
     msg = email.message_from_binary_file(f)
 # print(msg)
