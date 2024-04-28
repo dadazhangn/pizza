@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>get_Document</title>
+</head>
+
+<body>
+  <input type="file" id="emlFile" />
+  <div id="emlContent"></div>
+</body>
+<script>
+
+
+  var emlFile = document.getElementById('emlFile');
+  emlFile.addEventListener('change', function () {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var emlContent = document.getElementById('emlContent');
+      emlContent.innerHTML = reader.result;
+    }
+    reader.readAsText(this.files[0]);
+  });
+
+</script>
+
+</html>
